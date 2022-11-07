@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="775.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sigvertsen.c195.controller.reportsController">
+    <top>
+        <HBox prefHeight="20.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+            <padding>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </padding>
+            <children>
+                <HBox prefHeight="100.0" prefWidth="200.0">
+                    <children>
+                        <Label text="Reports">
+                            <font>
+                                <Font name="Arial Bold" size="18.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER_RIGHT" layoutX="20.0" layoutY="20.0" prefHeight="21.0" prefWidth="656.0">
+                    <children>
+                        <Label fx:id="reports_error_msg" />
+                    </children>
+                </HBox>
+            </children>
+        </HBox>
+    </top>
+    <center>
+        <HBox alignment="CENTER_LEFT" prefHeight="348.0" prefWidth="934.0" BorderPane.alignment="CENTER">
+            <children>
+                <VBox prefHeight="398.0" prefWidth="450.0">
+                    <children>
+                        <HBox prefHeight="15.0" prefWidth="315.0">
+                            <padding>
+                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                            </padding>
+                     <children>
+                        <Label text="Customer Appontments by Type and Month">
+                           <font>
+                              <Font name="Arial Bold" size="13.0" />
+                           </font>
+                        </Label>
+                     </children>
+                        </HBox>
+                        <TableView fx:id="reports_type_month_tbl" prefHeight="343.0" prefWidth="800.0">
+                            <columns>
+                                <TableColumn fx:id="reports_month_col" prefWidth="106.0" text="Month" />
+                                <TableColumn fx:id="reports_type_col" prefWidth="124.0" text="Type" />
+                                <TableColumn fx:id="reports_count_col" prefWidth="141.5" text="Number of Appointmets" />
+                            </columns>
+                        </TableView>
+                        <HBox alignment="CENTER_LEFT" prefHeight="18.0" prefWidth="485.0">
+                            <padding>
+                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                            </padding>
+                     <children>
+                        <ComboBox fx:id="reports_month_combo1" layoutX="15.0" layoutY="15.0" onAction="#onAction_type_month_report" prefWidth="150.0" promptText="Select Month">
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin></ComboBox>
+                     </children>
+                        </HBox>
+                    </children>
+               <HBox.margin>
+                  <Insets right="5.0" />
+               </HBox.margin>
+                </VBox>
+            <VBox layoutX="10.0" layoutY="10.0" prefHeight="398.0" prefWidth="450.0">
+               <children>
+                  <HBox prefHeight="15.0" prefWidth="315.0">
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                     <children>
+                        <Label text="Number of Appointments by Contact">
+                           <font>
+                              <Font name="Arial Bold" size="13.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <TableView fx:id="reports_contacts_tbl" prefHeight="336.0" prefWidth="335.0">
+                     <columns>
+                         <TableColumn fx:id="reports_month2_col" minWidth="0.0" prefWidth="117.0" text="Month" />
+                        <TableColumn fx:id="reports_contact_col" minWidth="6.0" prefWidth="106.0" text="Contact" />
+                        <TableColumn fx:id="reports_count_appt_col" minWidth="6.0" prefWidth="148.5" text="Number of Appointments" />
+                     </columns>
+                  </TableView>
+                   <HBox alignment="CENTER_LEFT" prefHeight="15.0" prefWidth="315.0">
+                       <padding>
+                           <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                       </padding>
+                       <children>
+                           <ComboBox fx:id="reports_month_combo2" onAction="#onAction_num_appts_by_month" prefWidth="150.0" promptText="Select Month">
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin></ComboBox>
+                       </children>
+                   </HBox>
+               </children>
+               <HBox.margin>
+                  <Insets left="5.0" />
+               </HBox.margin>
+            </VBox>
+            </children>
+        </HBox>
+    </center>
+    <padding>
+        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+    </padding>
+    <bottom>
+        <HBox alignment="CENTER_RIGHT" prefHeight="33.0" prefWidth="680.0" BorderPane.alignment="CENTER_RIGHT">
+            <padding>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+            </padding>
+            <children>
+                <Button mnemonicParsing="false" onAction="#onAction_back_to_home" text="Back to Home" />
+            </children>
+            <BorderPane.margin>
+                <Insets top="5.0" />
+            </BorderPane.margin>
+        </HBox>
+    </bottom>
+</BorderPane>

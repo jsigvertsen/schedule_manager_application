@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1400.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sigvertsen.c195.controller.addApptController">
+    <top>
+        <HBox prefHeight="34.0" prefWidth="1200.0" BorderPane.alignment="CENTER">
+            <children>
+                <HBox prefHeight="100.0" prefWidth="600.0">
+                    <children>
+                        <Label text="Add Appointment">
+                            <font>
+                                <Font name="Arial Bold" size="18.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER_RIGHT" prefHeight="21.0" prefWidth="795.0">
+               <children>
+                  <Label fx:id="addAppt_error_msg" />
+               </children></HBox>
+            </children>
+            <padding>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </padding>
+        </HBox>
+    </top>
+    <center>
+        <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <children>
+                <VBox prefHeight="503.0" prefWidth="1000.0">
+                    <children>
+                        <HBox prefHeight="24.0" prefWidth="800.0">
+                            <children>
+                                <HBox alignment="BOTTOM_LEFT" prefHeight="100.0" prefWidth="400.0">
+                                    <children>
+                                        <Label text="Appointments">
+                                            <font>
+                                                <Font name="Arial Bold" size="14.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </HBox>
+                                <HBox alignment="BOTTOM_RIGHT" prefHeight="18.0" prefWidth="591.0">
+                                    <children>
+                                        <Label text="View By:" />
+                              <RadioButton mnemonicParsing="false" onAction="#onAction_all_view" selected="true" text="All">
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                                 <toggleGroup>
+                                                <ToggleGroup fx:id="tgl_view_group" />
+                                 </toggleGroup>
+                              </RadioButton>
+                                        <RadioButton mnemonicParsing="false" onAction="#onAction_week_view" text="Current Week" toggleGroup="$tgl_view_group">
+                                            <HBox.margin>
+                                                <Insets left="10.0" />
+                                            </HBox.margin>
+                                        </RadioButton>
+                                        <RadioButton mnemonicParsing="false" onAction="#onAction_month_view" text="Current Month" toggleGroup="$tgl_view_group">
+                                            <HBox.margin>
+                                                <Insets left="10.0" />
+                                            </HBox.margin>
+                                        </RadioButton>
+                                    </children>
+                                </HBox>
+                            </children>
+                            <padding>
+                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                            </padding>
+                        </HBox>
+                        <TableView fx:id="addAppt_appointment_tbl" prefHeight="470.0" prefWidth="800.0">
+                            <columns>
+                                <TableColumn fx:id="addAppt_id_col" prefWidth="31.0" text="ID" />
+                                <TableColumn fx:id="addAppt_title_col" prefWidth="96.0" text="Title" />
+                                <TableColumn fx:id="addAppt_desc_col" prefWidth="106.0" text="Description" />
+                                <TableColumn fx:id="addAppt_location_col" prefWidth="70.0" text="Location" />
+                                <TableColumn fx:id="addAppt_contact_col" prefWidth="94.0" text="Contact" />
+                                <TableColumn fx:id="addAppt_type_col" prefWidth="125.0" text="Type" />
+                                <TableColumn fx:id="addAppt_start_col" prefWidth="130.0" text="Start" />
+                                <TableColumn fx:id="addAppt_end_col" minWidth="0.0" prefWidth="130.0" text="End" />
+                                <TableColumn fx:id="addAppt_customer_id_col" minWidth="0.0" prefWidth="107.0" text="Customer ID" />
+                                <TableColumn fx:id="addAppt_user_id" prefWidth="110.0" text="User ID" />
+                            </columns>
+                        </TableView>
+                    </children>
+                </VBox>
+            <VBox prefHeight="539.0" prefWidth="97.0">
+               <HBox.margin>
+                  <Insets left="25.0" />
+               </HBox.margin>
+               <children>
+                   <HBox alignment="CENTER_LEFT" prefHeight="35.0" prefWidth="148.0">
+                       <children>
+                           <Label text="ID" />
+                       </children>
+                       <padding>
+                           <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                       </padding>
+                       <VBox.margin>
+                           <Insets top="50.0" />
+                       </VBox.margin>
+                   </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="35.0" prefWidth="148.0">
+                     <children>
+                        <Label text="Title" />
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </HBox>
+                   <HBox alignment="CENTER_LEFT" prefHeight="35.0" prefWidth="148.0">
+                       <children>
+                           <Label text="Description" />
+                       </children>
+                       <padding>
+                           <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                       </padding>
+                   </HBox>
+                   <HBox alignment="CENTER_LEFT" prefHeight="35.0" prefWidth="148.0">
+                       <children>
+                           <Label text="Location" />
+                       </children>
+                       <padding>
+                           <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                       </padding>
+                   </HBox>
+                   <HBox alignment="CENTER_LEFT" prefHeight="35.0" prefWidth="148.0">
+                       <children>
+                           <Label text="Contact" />
+                       </children>
+                       <padding>
+                           <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                       </padding>
+                   </HBox>
+                   <HBox alignment="CENTER_LEFT" prefHeight="35.0" prefWidth="148.0">
+                       <children>
+                           <Label text="Customer" />
+                       </children>
+                       <padding>
+                           <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                       </padding>
+                   </HBox>
+                   <HBox alignment="CENTER_LEFT" prefHeight="35.0" prefWidth="148.0">
+                       <children>
+                           <Label text="Type" />
+                       </children>
+                       <padding>
+                           <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                       </padding>
+                   </HBox>
+                   <HBox alignment="CENTER_LEFT" prefHeight="35.0" prefWidth="148.0">
+                       <children>
+                           <Label text="Start Time" />
+                       </children>
+                       <padding>
+                           <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                       </padding>
+                   </HBox>
+                   <HBox alignment="CENTER_LEFT" prefHeight="35.0" prefWidth="148.0">
+                       <children>
+                           <Label text="Start Date" />
+                       </children>
+                       <padding>
+                           <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                       </padding>
+                   </HBox>
+                   <HBox alignment="CENTER_LEFT" prefHeight="35.0" prefWidth="148.0">
+                       <children>
+                           <Label text="End Time" />
+                       </children>
+                       <padding>
+                           <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                       </padding>
+                   </HBox>
+                   <HBox alignment="CENTER_LEFT" prefHeight="35.0" prefWidth="148.0">
+                       <children>
+                           <Label text="End Date" />
+                       </children>
+                       <padding>
+                           <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                       </padding>
+                   </HBox>
+               </children>
+            </VBox>
+            <VBox prefHeight="503.0" prefWidth="220.0">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+               <children>
+                   <HBox alignment="CENTER" prefHeight="35.0" prefWidth="200.0">
+                       <children>
+                           <TextField disable="true" prefHeight="26.0" prefWidth="200.0" promptText="Auto" />
+                       </children>
+                       <VBox.margin>
+                           <Insets top="50.0" />
+                       </VBox.margin>
+                   </HBox>
+                  <HBox alignment="CENTER" prefHeight="35.0" prefWidth="200.0">
+                     <children>
+                        <TextField fx:id="addAppt_title" prefHeight="26.0" prefWidth="200.0" />
+                     </children>
+                  </HBox>
+                   <HBox alignment="CENTER" prefHeight="35.0" prefWidth="200.0">
+                       <children>
+                           <TextField fx:id="addAppt_desc" prefWidth="200.0" />
+                       </children>
+                   </HBox>
+                   <HBox alignment="CENTER" prefHeight="35.0" prefWidth="200.0">
+                       <children>
+                           <TextField fx:id="addAppt_location" prefWidth="200.0" />
+                       </children>
+                   </HBox>
+                  <HBox alignment="CENTER" layoutX="10.0" layoutY="80.0" prefHeight="35.0" prefWidth="200.0">
+                     <children>
+                        <ComboBox fx:id="addAppt_contact" prefWidth="200.0" promptText="Select Contact" />
+                     </children>
+                  </HBox>
+                   <HBox alignment="CENTER" layoutX="10.0" layoutY="80.0" prefHeight="35.0" prefWidth="200.0">
+                       <children>
+                           <ComboBox fx:id="addAppt_customer" prefWidth="200.0" promptText="Select Customer" />
+                       </children>
+                   </HBox>
+                   <HBox alignment="CENTER" prefHeight="35.0" prefWidth="200.0">
+                       <children>
+                           <TextField fx:id="addAppt_type" prefWidth="200.0" />
+                       </children>
+                   </HBox>
+                   <HBox alignment="CENTER" layoutX="10.0" layoutY="80.0" prefHeight="35.0" prefWidth="200.0">
+                       <children>
+                           <ComboBox fx:id="addAppt_startTime" prefWidth="200.0" promptText="Select Start Time" />
+                       </children>
+                   </HBox>
+                   <HBox alignment="CENTER" layoutX="10.0" layoutY="80.0" prefHeight="35.0" prefWidth="200.0">
+                     <children>
+                        <DatePicker fx:id="addAppt_start_date" prefWidth="200.0" promptText="Select Date" />
+                     </children>
+                   </HBox>
+                   <HBox alignment="CENTER" layoutX="10.0" layoutY="80.0" prefHeight="35.0" prefWidth="200.0">
+                       <children>
+                           <ComboBox fx:id="addAppt_end_time" prefWidth="200.0" promptText="Select End Time" />
+                       </children>
+                   </HBox>
+                   <HBox alignment="CENTER" layoutX="10.0" layoutY="80.0" prefHeight="35.0" prefWidth="200.0">
+                     <children>
+                        <DatePicker fx:id="addAppt_end_date" prefWidth="200.0" promptText="Select Date" />
+                     </children>
+                   </HBox>
+                   <HBox alignment="CENTER_RIGHT" layoutX="10.0" layoutY="80.0" prefHeight="12.0" prefWidth="220.0">
+                       <children>
+                           <Label text="*All times local" />
+                       </children>
+                     <padding>
+                        <Insets left="10.0" right="10.0" />
+                     </padding>
+                   </HBox>
+                  <HBox alignment="CENTER_RIGHT" layoutX="10.0" layoutY="270.0" prefHeight="35.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="addAppt_save_btn" mnemonicParsing="false" onAction="#onAction_addAppt_save" text="Add Appointment">
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#onAction_addAppt_clear" text="Clear">
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" top="10.0" />
+                     </padding>
+                  </HBox>
+               </children>
+            </VBox>
+            </children>
+            <BorderPane.margin>
+                <Insets left="10.0" right="10.0" top="10.0" />
+            </BorderPane.margin>
+        </HBox>
+    </center>
+   <bottom>
+      <HBox alignment="CENTER_RIGHT" prefHeight="20.0" prefWidth="1200.0" BorderPane.alignment="CENTER">
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+         <children>
+            <Button mnemonicParsing="false" onAction="#onAction_back_to_home" text="Back to Home" />
+         </children>
+      </HBox>
+   </bottom>
+</BorderPane>

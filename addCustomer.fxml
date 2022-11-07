@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sigvertsen.c195.controller.addCustomerController">
+   <top>
+      <HBox prefHeight="20.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+         <children>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label text="Add Customer">
+                     <font>
+                        <Font name="Arial Bold" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" layoutX="20.0" layoutY="20.0" prefHeight="21.0" prefWidth="969.0">
+               <children>
+                  <Label fx:id="addCustomer_error_msg" />
+               </children>
+            </HBox>
+         </children>
+      </HBox>
+   </top>
+   <center>
+      <HBox alignment="CENTER_LEFT" prefHeight="359.0" prefWidth="707.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox prefHeight="303.0" prefWidth="797.0">
+               <children>
+                  <HBox prefHeight="15.0" prefWidth="315.0">
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                     <children>
+                        <Label text="Customers">
+                           <font>
+                              <Font name="Arial Bold" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <TableView fx:id="addCustomer_tbl" prefHeight="343.0" prefWidth="797.0">
+                     <columns>
+                        <TableColumn fx:id="addCustomer_customer_name" prefWidth="145.0" text="Name" />
+                        <TableColumn fx:id="addCustomer_customer_address" prefWidth="245.0" text="Address" />
+                        <TableColumn fx:id="addCustomer_customer_postal_code" prefWidth="104.0" text="Postal Code" />
+                        <TableColumn fx:id="addCustomer_customer_phone" prefWidth="115.0" text="Phone" />
+                        <TableColumn fx:id="addCustomer_customer_FLD" prefWidth="187.0" text="First-Level Division" />
+                     </columns>
+                  </TableView>
+               </children>
+            </VBox>
+            <VBox prefHeight="339.0" prefWidth="114.0">
+               <children>
+                  <HBox alignment="CENTER_LEFT" prefHeight="35.0" prefWidth="200.0">
+                     <children>
+                        <Label text="ID" />
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets top="25.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="35.0" prefWidth="200.0">
+                     <children>
+                        <Label text="Name" />
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="35.0" prefWidth="200.0">
+                     <children>
+                        <Label text="Address" />
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="35.0" prefWidth="200.0">
+                     <children>
+                        <Label text="Postal Code" />
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="35.0" prefWidth="200.0">
+                     <children>
+                        <Label text="Phone Number" />
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="35.0" prefWidth="200.0">
+                     <children>
+                        <Label text="Country" />
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="35.0" prefWidth="200.0">
+                     <children>
+                        <Label text="First-Level Division" />
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </HBox>
+               </children>
+               <HBox.margin>
+                  <Insets left="30.0" />
+               </HBox.margin>
+            </VBox>
+            <VBox prefHeight="304.0" prefWidth="215.0">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="35.0" prefWidth="0.0">
+                     <children>
+                        <TextField disable="true" prefWidth="200.0" promptText="Auto" />
+                     </children>
+                     <VBox.margin>
+                        <Insets top="25.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="35.0" prefWidth="0.0">
+                     <children>
+                        <TextField fx:id="addCustomer_name_field" prefWidth="200.0" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="35.0" prefWidth="200.0">
+                     <children>
+                        <TextField fx:id="addCustomer_address_field" prefWidth="200.0" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="35.0" prefWidth="200.0">
+                     <children>
+                        <TextField fx:id="addCustomer_zip_field" prefWidth="200.0" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="35.0" prefWidth="200.0">
+                     <children>
+                        <TextField fx:id="addCustomer_phone_field" prefWidth="200.0" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="35.0" prefWidth="200.0">
+                     <children>
+                        <ComboBox fx:id="addCustomer_country_field" onAction="#onAction_country_select" prefWidth="200.0" promptText="Select Country" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="35.0" prefWidth="200.0">
+                     <children>
+                        <ComboBox fx:id="addCustomer_FLD_field" disable="true" prefWidth="200.0" promptText="Select First-Level Division" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_RIGHT" prefHeight="22.0" prefWidth="189.0">
+                     <children>
+                        <Button fx:id="addCustomer_add_btn" mnemonicParsing="false" onAction="#onAction_addContact_add" text=" Add Customer">
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#onAction_addCustomer_clear" text="Clear" />
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </center>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+   <bottom>
+      <HBox alignment="CENTER_RIGHT" prefHeight="33.0" prefWidth="680.0" BorderPane.alignment="CENTER_RIGHT">
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+         <children>
+            <Button mnemonicParsing="false" onAction="#onAction_back_to_home" text="Back to Home" />
+         </children>
+         <BorderPane.margin>
+            <Insets top="5.0" />
+         </BorderPane.margin>
+      </HBox>
+   </bottom>
+</BorderPane>

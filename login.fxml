@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sigvertsen.c195.controller.loginController">
+   <center>
+      <VBox prefHeight="300.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER" prefHeight="261.0" prefWidth="600.0">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="223.0" prefWidth="316.0">
+                     <children>
+                        <HBox alignment="BOTTOM_CENTER" prefHeight="2.0" prefWidth="250.0">
+                           <children>
+                              <Label fx:id="login_welcome_lbl" text="Welcome! Please log in">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="500.0">
+                           <children>
+                              <VBox alignment="BOTTOM_CENTER" prefHeight="100.0" prefWidth="128.0">
+                                 <children>
+                                    <HBox fx:id="username_text" alignment="CENTER_LEFT" prefHeight="0.0" prefWidth="100.0">
+                                       <padding>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </padding>
+                                       <children>
+                                          <Label fx:id="username_lbl" text="Username" />
+                                       </children></HBox>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="35.0" prefWidth="100.0">
+                                       <children>
+                                          <Label fx:id="password_lbl" text="Password" />
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </padding>
+                                    </HBox>
+                                 </children></VBox>
+                              <VBox alignment="BOTTOM_CENTER" prefHeight="100.0" prefWidth="140.0">
+                                 <children>
+                                    <HBox alignment="CENTER" prefHeight="35.0" prefWidth="100.0">
+                                       <children>
+                                          <TextField fx:id="login_username_txt" />
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER" prefHeight="35.0" prefWidth="100.0">
+                                       <children>
+                                          <PasswordField fx:id="login_password_txt" onAction="#onAction_login_password_field" />
+                                       </children>
+                                    </HBox>
+                                 </children></VBox>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="14.0" prefWidth="250.0">
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                           <children>
+                              <Label fx:id="login_error_msg_lbl" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
+   <top>
+      <HBox prefHeight="18.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="300.0">
+               <children>
+                  <Label fx:id="login_scheduling_system_lbl" text="Scheduling System">
+                     <font>
+                        <Font name="Arial Bold" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="TOP_RIGHT" prefHeight="100.0" prefWidth="300.0">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding></HBox>
+         </children>
+      </HBox>
+   </top>
+   <bottom>
+      <HBox alignment="BOTTOM_RIGHT" prefHeight="31.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="BOTTOM_LEFT" prefHeight="100.0" prefWidth="300.0">
+               <children>
+                  <Label fx:id="login_location_lbl" />
+               </children>
+            </HBox>
+            <HBox alignment="BOTTOM_RIGHT" prefHeight="100.0" prefWidth="300.0">
+               <children>
+                  <Button fx:id="login_exit_btn" mnemonicParsing="false" onAction="#onAction_login_exit" text="Exit" />
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding></HBox>
+   </bottom>
+</BorderPane>
